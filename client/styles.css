@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    background-color: blanchedalmond;
+}
+.card {
+    margin: 20px;
+    padding: 20px;
+    background-color: blue;
+}
+.heading {
+    font-style: italic;
+}

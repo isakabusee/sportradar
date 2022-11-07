@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="heading">Game data will be here!</h1>
+    <h2>Users:</h2>
+    <div></div>
+    <p id="demo"></p>
+    <!-- <div class="container"></div> -->
+    <input placeholder="enter url here"/>
+    <button type="submit">submit</button>
+    <script>
+        fetch('http://localhost:5000/match')
+        .then(res => {
+            return res.json()
+        })
+        .then(data => data.forEach(user => {
+            const markup = `<div>${user.name}</div>`;
+            document.querySelector('div').insertAdjacentHTML('beforeend', markup);
+        }))
+
+    </script>
+</body>
+</html>
